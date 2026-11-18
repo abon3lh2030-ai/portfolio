@@ -85,10 +85,14 @@ html[lang="en"] .proj h3{font-family:var(--display-en);font-weight:900;font-size
 .proj.lead .lead-row{display:flex;justify-content:space-between;gap:20px;align-items:start;flex-wrap:wrap}
 .proj.lead p{color:var(--bone);font-size:19px}
 .proj.lead + .proj{border-top:none}
+.proj.with-img{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.render{margin:0;background:#F8F8F8;padding:16px}
+.render img{display:block;width:100%;height:auto}
+@media (max-width:860px){.proj.with-img{grid-template-columns:1fr}}
 @media (max-width:860px){.proj{grid-template-columns:1fr}.status{justify-self:start}}
 
 /* abilities */
-.abil{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,56px)}
+.abil{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(32px,4vw,56px) clamp(24px,5vw,72px)}
 .abil h3{font-size:22px;padding-bottom:10px;border-bottom:3px solid var(--orange);margin-bottom:14px}
 .abil ul{list-style:none}
 .abil li{padding:7px 0;border-bottom:1px solid var(--line)}
@@ -202,7 +206,7 @@ footer{border-top:1px solid var(--line);padding:22px var(--pad);color:var(--ash)
     </div>
     <div>
       <h3><span lang="ar">أقود فريق</span><span lang="en">I lead teams</span></h3>
-      <p><span lang="ar">قدت فريق من ٦ في أكاديمية طويق، وكنت المسؤول عن الكود والفكرة التقنية، ووصلنا بالمنصة لمعرض سيف.</span><span lang="en">I led a team of six at Tuwaiq Academy, owned the code and technical direction, and took our platform to the SAIIF exhibition.</span></p>
+      <p><span lang="ar">قدت فريق من ٦ في أكاديمية طويق، وكنت المسؤول عن الكود والفكرة التقنية، وسلّمنا المنصة كاملة.</span><span lang="en">I led a team of six at Tuwaiq Academy, owned the code and technical direction, and we shipped the full platform.</span></p>
     </div>
     <div>
       <h3><span lang="ar">أتعلم بسرعة</span><span lang="en">I learn fast</span></h3>
@@ -214,7 +218,7 @@ footer{border-top:1px solid var(--line);padding:22px var(--pad);color:var(--ash)
 
 <section id="work">
 <div class="wrap">
-  <h2 class="h2"><span lang="ar">اللي بنيته</span><span lang="en">What I've built</span></h2>
+  <h2 class="h2"><span lang="ar">مشاريعي البرمجية</span><span lang="en">Software projects</span></h2>
 
   <article class="proj lead">
     <div class="lead-row">
@@ -225,7 +229,37 @@ footer{border-top:1px solid var(--line);padding:22px var(--pad);color:var(--ash)
       <span lang="ar">منصة SaaS للشركات السعودية الصغيرة والمتوسطة: فريق موظفين ذكاء اصطناعي يشتغلون تحت إشراف المدير. أنا القائد التقني، والكود مكتمل والاختبارات ناجحة.</span>
       <span lang="en">A SaaS platform that gives Saudi SMEs a team of AI employees, supervised by the manager. I'm the tech lead; the code is complete and the test suite passes.</span>
     </p>
-    <p class="stack">Supabase · Render · Claude API · Moyasar</p>
+    <p class="stack">Node.js · TypeScript · Claude API</p>
+  </article>
+
+  <article class="proj">
+    <h3><span lang="ar">ذكيّ</span><span lang="en">Zakiy</span></h3>
+    <div>
+      <p><span lang="ar">منصة مذاكرة جماعية بالذكاء الاصطناعي: ترفع ملفات PDF وتطلع لك ملخصات واختبارات تفاعلية، وغرف مذاكرة وتحديات مباشرة. قدت فيها فريق من ٦ كمشروع تخرج في أكاديمية طويق.</span><span lang="en">An AI study platform: upload PDFs to get summaries and interactive quizzes, plus live group study rooms and challenges. I led a team of six on it as our Tuwaiq Academy capstone.</span></p>
+      <p class="stack">HTML · CSS · JavaScript · Gemini API</p>
+      <p class="stack"><a class="live" href="https://abon3lh2030-ai.github.io/zakiy-platform/"><span lang="ar">جرّب المنصة</span><span lang="en">Try it live</span></a></p>
+    </div>
+    <span class="status live"><span lang="ar">منشور</span><span lang="en">Live</span></span>
+  </article>
+
+  <article class="proj">
+    <h3>CyberCore</h3>
+    <div>
+      <p><span lang="ar">أداة تجمع أدوات فحص الشبكات والأمن السيبراني في واجهة وحدة سهلة، بدل أوامر سطر الأوامر المعقدة.</span><span lang="en">A toolkit that brings network scanning and security tools into one clean interface, instead of complex command-line commands.</span></p>
+      <p class="stack">HTML · CSS · JavaScript · <span lang="ar">الشبكات</span><span lang="en">Networking</span></p>
+      <p class="stack"><a class="live" href="https://abon3lh2030-ai.github.io/cybercore/"><span lang="ar">افتح الأداة</span><span lang="en">Open the toolkit</span></a></p>
+    </div>
+    <span class="status live"><span lang="ar">منشور</span><span lang="en">Live</span></span>
+  </article>
+
+  <article class="proj">
+    <h3><span lang="ar">لعبة الرياضيات</span><span lang="en">Math Game</span></h3>
+    <div>
+      <p><span lang="ar">لعبة تحديات رياضيات تفاعلية على الويب، تشتغل على الجوال والكمبيوتر.</span><span lang="en">An interactive math challenge game for the web that works on phone and desktop.</span></p>
+      <p class="stack">HTML · JavaScript</p>
+      <p class="stack"><a class="live" href="https://abon3lh2030-ai.github.io/math-game/"><span lang="ar">العب الحين</span><span lang="en">Play it</span></a></p>
+    </div>
+    <span class="status live"><span lang="ar">منشور</span><span lang="en">Live</span></span>
   </article>
 
   <article class="proj">
@@ -238,31 +272,58 @@ footer{border-top:1px solid var(--line);padding:22px var(--pad);color:var(--ash)
   </article>
 
   <article class="proj">
+    <h3><span lang="ar">حصن</span><span lang="en">HISN</span></h3>
+    <div>
+      <p><span lang="ar">موقع وتطبيق iOS للأمن الرقمي ومكافحة الاحتيال: يفحص الرسائل والروابط والصور ويقيّم خطورتها، وفيه مساعد ذكاء اصطناعي وأدوات لحماية الخصوصية، وواجهته عربية أولاً.</span><span lang="en">A website and native iOS app against digital fraud. It scans messages, links and images and rates their risk, with an AI assistant and privacy tools, in an Arabic-first interface.</span></p>
+      <p class="stack">iOS · Full stack · AI · <span lang="ar">أمن سيبراني</span><span lang="en">Cybersecurity</span></p>
+    </div>
+    <span class="status"><span lang="ar">خاص، غير منشور</span><span lang="en">Private</span></span>
+  </article>
+
+  <article class="proj">
+    <h3>StudentOS AI</h3>
+    <div>
+      <p><span lang="ar">تطبيق سطح مكتب للطلاب مدعوم بالذكاء الاصطناعي.</span><span lang="en">An AI-powered desktop app for students.</span></p>
+      <p class="stack">Python · CustomTkinter · AI</p>
+    </div>
+    <span class="status"><span lang="ar">خاص، غير منشور</span><span lang="en">Private</span></span>
+  </article>
+
+  <article class="proj">
+    <h3><span lang="ar">النظارة الذكية للمكفوفين</span><span lang="en">Smart Glasses for the Visually Impaired</span></h3>
+    <div>
+      <p><span lang="ar">مشروع أنظمة مدمجة يجمع البرمجة والإلكترونيات: يكشف الأشياء حول الشخص الكفيف ويقيس المسافة لها وينبّهه.</span><span lang="en">An embedded project combining code and electronics: it detects objects around a visually impaired person, measures the distance and alerts them.</span></p>
+      <p class="stack">Arduino · C++ · Processing</p>
+      <p class="stack"><a class="live" href="https://www.tinkercad.com/things/br3TtrBo7oT-"><span lang="ar">شوف النموذج</span><span lang="en">View the prototype</span></a></p>
+    </div>
+    <span class="status"><span lang="ar">نموذج أولي</span><span lang="en">Prototype</span></span>
+  </article>
+</div>
+</section>
+
+<section id="make">
+<div class="wrap">
+  <h2 class="h2"><span lang="ar">تصميم وطباعة ثلاثية الأبعاد</span><span lang="en">3D design and printing</span></h2>
+
+  <article class="proj lead with-img">
+    <figure class="render"><img src="data:image/webp;base64,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" width="560" height="585" alt="Snack Ops 3D render: black tactical holder carrying a can, a cup and a snack pot, with an S.S.F lid"></figure>
+    <div>
+      <div class="lead-row">
+        <h3>Snack Ops</h3>
+        <span class="status">3D</span>
+      </div>
+      <p><span lang="ar">حامل تكتيكي يشيل علبة مشروب وكوب وصحن سناك في قطعة وحدة. صممته من الصفر وأطبعه على طابعتي، وعلى الغطاء حروف S.S.F.</span><span lang="en">A tactical holder that carries a can, a cup and a snack pot in one piece. I designed it from scratch and print it on my own printer; the lid carries the letters S.S.F.</span></p>
+      <p class="stack"><span lang="ar">تصميم ثلاثي الأبعاد · طابعة Creality</span><span lang="en">3D modeling · Creality printer</span></p>
+    </div>
+  </article>
+
+  <article class="proj">
     <h3><span lang="ar">مركبة مريخ روكر-بوجي</span><span lang="en">Rocker-Bogie Mars Rover</span></h3>
     <div>
-      <p><span lang="ar">مركبة بست عجلات مستوحاة من مركبات ناسا، هدفها تتحرر بنفسها إذا علقت في تربة المريخ الرخوة. الهيكل والقطع مطبوعة ثلاثي الأبعاد. مشروعي في أولمبياد إبداع.</span><span lang="en">A six-wheel rover inspired by NASA's Mars rovers, designed to free itself when it gets stuck in loose Martian soil. 3D-printed chassis and parts. My entry for the Ibdaa national olympiad.</span></p>
+      <p><span lang="ar">مركبة بست عجلات مستوحاة من مركبات ناسا، هدفها تتحرر بنفسها إذا علقت في تربة المريخ الرخوة. الهيكل والقطع مطبوعة ثلاثي الأبعاد، والتحكم بـ ESP32. مشروعي في أولمبياد إبداع.</span><span lang="en">A six-wheel rover inspired by NASA's Mars rovers, designed to free itself when it gets stuck in loose Martian soil. 3D-printed chassis and parts, controlled by an ESP32. My entry for the Ibdaa national olympiad.</span></p>
       <p class="stack">ESP32 · <span lang="ar">طباعة ثلاثية الأبعاد</span><span lang="en">3D printing</span> · <span lang="ar">هندسة ميكانيكية</span><span lang="en">Mechanical design</span></p>
     </div>
     <span class="status"><span lang="ar">قيد التجربة</span><span lang="en">Testing</span></span>
-  </article>
-
-  <article class="proj">
-    <h3><span lang="ar">ذكيّ</span><span lang="en">Zakiy</span></h3>
-    <div>
-      <p><span lang="ar">منصة مذاكرة جماعية بالذكاء الاصطناعي: تلخيص المحتوى، توليد اختبارات، وغرف مذاكرة تفاعلية. قدت فيها فريق من ٦ كمشروع تخرج في أكاديمية طويق، وانعرضت في معرض سيف.</span><span lang="en">An AI study platform: content summaries, generated quizzes and live group study rooms. I led a team of six on it as our Tuwaiq Academy capstone, and we exhibited it at SAIIF.</span></p>
-      <p class="stack">HTML · CSS · JavaScript · Gemini API</p>
-      <p class="stack"><a class="live" href="https://abon3lh2030-ai.github.io/zakiy-platform/"><span lang="ar">جرّب المنصة</span><span lang="en">Try it live</span></a></p>
-    </div>
-    <span class="status live"><span lang="ar">منشور</span><span lang="en">Shipped</span></span>
-  </article>
-
-  <article class="proj">
-    <h3>Snack Ops</h3>
-    <div>
-      <p><span lang="ar">حامل مشروبات وسناكات بطابع تكتيكي، صممته وطبعته على طابعتي. على الغطاء حروف S.S.F.</span><span lang="en">A tactical-style drink and snack holder I designed and printed on my own printer. The lid carries the letters S.S.F.</span></p>
-      <p class="stack"><span lang="ar">تصميم ثلاثي الأبعاد · طابعة Creality</span><span lang="en">3D modeling · Creality printer</span></p>
-    </div>
-    <span class="status"><span lang="ar">على الطابعة</span><span lang="en">On the printer</span></span>
   </article>
 </div>
 </section>
@@ -281,21 +342,28 @@ footer{border-top:1px solid var(--line);padding:22px var(--pad);color:var(--ash)
       </ul>
     </div>
     <div>
-      <h3><span lang="ar">هندسة وعتاد</span><span lang="en">Hardware</span></h3>
+      <h3><span lang="ar">هندسة وعتاد</span><span lang="en">Hardware and engineering</span></h3>
       <ul>
         <li>ESP32 · Arduino</li>
-        <li><span lang="ar">محركات وحساسات</span><span lang="en">Motors and sensors</span></li>
-        <li><span lang="ar">أنظمة تعليق روكر-بوجي</span><span lang="en">Rocker-bogie suspension</span></li>
-        <li><span lang="ar">درونز (طويق)</span><span lang="en">Drones (Tuwaiq)</span></li>
+        <li><span lang="ar">أنظمة مدمجة (C++)</span><span lang="en">Embedded systems (C++)</span></li>
+        <li><span lang="ar">تصميم ثلاثي الأبعاد</span><span lang="en">3D modeling</span></li>
       </ul>
     </div>
     <div>
-      <h3><span lang="ar">تصنيع</span><span lang="en">Making</span></h3>
+      <h3><span lang="ar">القيادة والمسؤولية</span><span lang="en">Leadership and ownership</span></h3>
       <ul>
-        <li><span lang="ar">تصميم ثلاثي الأبعاد</span><span lang="en">3D modeling</span></li>
-        <li><span lang="ar">طباعة ثلاثية الأبعاد</span><span lang="en">3D printing</span></li>
-        <li><span lang="ar">قيادة فرق تقنية</span><span lang="en">Leading tech teams</span></li>
-        <li><span lang="ar">أساسيات الأمن السيبراني</span><span lang="en">Cybersecurity basics</span></li>
+        <li><span lang="ar">قيادة فرق تقنية (فريق من ٦ في طويق)</span><span lang="en">Leading tech teams (a team of six at Tuwaiq)</span></li>
+        <li><span lang="ar">قائد تقني لمنصة NEXUS</span><span lang="en">Tech lead of the NEXUS platform</span></li>
+        <li><span lang="ar">إدارة المشروع من الفكرة للإطلاق</span><span lang="en">Taking projects from idea to launch</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3><span lang="ar">الأمن السيبراني</span><span lang="en">Cybersecurity</span></h3>
+      <ul>
+        <li><span lang="ar">فحص الشبكات واستخدام أدوات الأمن (CyberCore)</span><span lang="en">Network scanning and security tooling (CyberCore)</span></li>
+        <li><span lang="ar">كشف الروابط والرسائل الاحتيالية (حصن)</span><span lang="en">Detecting scam links and messages (HISN)</span></li>
+        <li><span lang="ar">أدوات حماية الخصوصية</span><span lang="en">Privacy protection tools</span></li>
+        <li><span lang="ar">أساسيات الأمن السيبراني (طويق)</span><span lang="en">Cybersecurity fundamentals (Tuwaiq)</span></li>
       </ul>
     </div>
   </div>
@@ -306,10 +374,9 @@ footer{border-top:1px solid var(--line);padding:22px var(--pad);color:var(--ash)
 <div class="wrap">
   <h2 class="h2"><span lang="ar">السجل</span><span lang="en">Record</span></h2>
   <ul class="record">
-    <li><span><span lang="ar">أكاديمية طويق</span><span lang="en">Tuwaiq Academy</span></span><span><span lang="ar">خريج معسكر التطوير التقني للناشئين، ودرست فيها الأمن السيبراني والبرمجة والدرونز</span><span lang="en">Graduate of the junior tech bootcamp; studied cybersecurity, programming and drones</span></span></li>
+    <li><span><span lang="ar">أكاديمية طويق</span><span lang="en">Tuwaiq Academy</span></span><span><span lang="ar">خريج معسكر التطوير التقني للناشئين، ودرست فيها الأمن السيبراني والذكاء الاصطناعي والبرمجة</span><span lang="en">Graduate of the junior tech bootcamp; studied cybersecurity, AI and programming</span></span></li>
     <li><span><span lang="ar">منصة سطر</span><span lang="en">Satr</span></span><span>Python 101 · Python 103 · JavaScript 103</span></li>
-    <li><span><span lang="ar">موهبة</span><span lang="en">Mawhiba</span></span><span><span lang="ar">مرشّح أولمبياد نسمو (المعلوماتية 2)، ومشارك في أولمبياد إبداع</span><span lang="en">Nominated for the Nasmo olympiad (Informatics 2); competing in Ibdaa</span></span></li>
-    <li><span><span lang="ar">معرض سيف</span><span lang="en">SAIIF</span></span><span><span lang="ar">عرضت منصة ذكيّ في بوث خاص</span><span lang="en">Exhibited Zakiy at its own booth</span></span></li>
+    <li><span><span lang="ar">موهبة</span><span lang="en">Mawhiba</span></span><span><span lang="ar">ترشّحت من مدرستي للمشاركة في أولمبياد نسمو (المعلوماتية 2)، وتأهلت للمرحلة الثانية (نصف النهائي)</span><span lang="en">Nominated by my school for the Nasmo olympiad (Informatics 2); qualified for round two (semifinal)</span></span></li>
   </ul>
 </div>
 </section>
